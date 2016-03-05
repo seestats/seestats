@@ -16,6 +16,7 @@
             },
 
             "source_ip": { "type": "ip" },
+            "source_location": { "type": "geo_point" },
 
             "target": {
                "type": "string",
