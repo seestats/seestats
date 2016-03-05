@@ -1,0 +1,39 @@
+{
+  "template": "see-stats-*",
+
+  "settings": {
+    "number_of_shards": 5
+  },
+
+   "mappings": {
+      "raw": {
+         "_all": {
+            "enabled": false
+         },
+         "properties": {
+            "time": {
+               "type": "date"
+            },
+
+            "target": {
+                "type": "string",
+               "index": "not_analyzed"
+            },
+            "traffic": {
+                "type": "integer"
+            },
+            "status_code": {
+                "type": "integer"
+            },
+            "user_agent": {
+                "type": "string",
+                "analyzer": "standard"
+            },
+            "cookies": {
+                "type": "string",
+                "analyzer": "standard"
+            }
+         }
+      }
+   }
+}
